@@ -1,0 +1,258 @@
+Sub Macro5()
+'
+' Macro5 Macro
+' remove Project Cell Border
+' save as PDF with specific file name
+' save on CheckIn Folder
+
+'
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+' select Glider
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Glider").Visible = True
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+' if the pivot has 24 or less entries, leave as 1 page
+' if the pivot has more than 24 entries, split into seperate categories
+' complete for 1st category
+' complete for 2nd category
+' Select B7
+    Range("B7").Select
+' replace Multime Item text with "Glider"
+    ActiveCell.FormulaR1C1 = "Glider"
+' remove border
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+' name file and save as PDF in the CheckInSheets Desktop Folder
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_Glider.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+
+
+'start again
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Math Escape").Visible = True
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Math Escape"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_MathEscape.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("NEDC").Visible = True
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "NEDC"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_NEDC.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Prosthetic Arm").Visible = True
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Prosthetic Arm"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_ProstheticArm.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Robotics Sumo").Visible = True
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Robotics Sumo"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_RoboticsSumo.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Stick Together").Visible = True
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Stick Together"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_StickTogether.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Think Tank").Visible = True
+        .PivotItems("Ultimate Disc").Visible = False
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Think Tank"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_ThinkTank.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+    
+    
+    ActiveSheet.PivotTables("PivotTable2").PivotFields("Project").CurrentPage = _
+        "(All)"
+    With ActiveSheet.PivotTables("PivotTable2").PivotFields("Project")
+        .PivotItems("Ultimate Disc").Visible = True
+        .PivotItems("Glider").Visible = False
+        .PivotItems("Math Escape").Visible = False
+        .PivotItems("NEDC").Visible = False
+        .PivotItems("Prosthetic Arm").Visible = False
+        .PivotItems("Robotics Sumo").Visible = False
+        .PivotItems("Stick Together").Visible = False
+        .PivotItems("Think Tank").Visible = False
+        .PivotItems("(blank)").Visible = False
+    End With
+    Range("B7").Select
+    ActiveCell.FormulaR1C1 = "Ultimate Disc"
+    Rows("7:7").Select
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    Selection.Borders(xlEdgeLeft).LineStyle = xlNone
+    Selection.Borders(xlEdgeTop).LineStyle = xlNone
+    Selection.Borders(xlEdgeBottom).LineStyle = xlNone
+    Selection.Borders(xlEdgeRight).LineStyle = xlNone
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+    ActiveSheet.ExportAsFixedFormat Type:=xlTypePDF, Filename:= _
+        "C:\Users\rociomora\Desktop\CheckInSheets\CheckIn_UltimateDisc.pdf", Quality:= _
+        xlQualityStandard, IncludeDocProperties:=True, IgnorePrintAreas:=False, _
+        OpenAfterPublish:=False
+
+End Sub
